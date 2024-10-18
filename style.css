@@ -15,7 +15,10 @@
     margin-bottom: 10px;
     cursor: pointer;
   }
-  
+  body {
+    background-color: #D6E4F0; 
+}
+
   .button:hover {
     background-color: #D6E4F0;
   }
