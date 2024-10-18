@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Página de Feedback</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <div class="container">
+    <h1>Juntos, construímos o futuro.</h1>
+    <p>Reclame-aqui!</p>
+    <button class="btn">Fale conosco</button>
+
+    <div class="buttons-container">
+      <button class="btn icon-thumb-up" onclick="openFeedbackModal('elogio')">Elogio</button>
+      <button class="btn icon-thumb-down" onclick="openFeedbackModal('reclamacao')">Reclamações</button>
+      <button class="btn icon-empty" onclick="openFeedbackModal('sugestao')">Sugestão</button>
+      <button class="btn icon-megaphone" onclick="openFeedbackModal('denuncia')">Denúncia</button>
+      <button class="btn icon-person" onclick="openFeedbackModal('solicitacao')">Solicitação</button>
+      <button class="btn icon-chat" onclick="openFeedbackModal('sugestao')">Sugestão</button>
+    </div>
+
+    <div id="feedbackModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Enviar Feedback</h2>
+        <form id="feedbackForm">
+          <label for="tipo">Tipo de Feedback:</label>
+          <select id="tipo" name="tipo">
+            <option value="elogio">Elogio</option>
+            <option value="reclamacao">Reclamação</option>
+            <option value="sugestao">Sugestão</option>
+            <option value="denuncia">Denúncia</option>
+            <option value="solicitacao">Solicitação</option>
+          </select>
+
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem aqui..."></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script
